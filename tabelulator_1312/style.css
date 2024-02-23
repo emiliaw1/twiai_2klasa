@@ -1,0 +1,14 @@
+table{
+    border: 1px solid red;
+}
+td{
+    border: 1px dotted blue;
+    text-align: center;
+}
+.parzysta{
+    background-color: red;
+}
+
+.nieparzysta{
+    background-color: yellow;
+}
