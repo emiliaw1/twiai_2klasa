@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tabelulator v2000</h1>
+    <p>Podaj liczba wierszy:
+        <input type="range" max="100" id="wiersze" onchange="generuj()">
+    </p>
+    <p>Podaj liczbe kolumn:
+        <input type="range" max="100" id="kolumny" onchange="generuj()">
+    </p>
+    <p>Parzyste: <span id="parzysta"></span></p>
+    <p>Nieparzyste: <span id="nieparzysta"></span> </p>
+    <div id="tabela">Tu pojawi się tabela...</div>
+    <script src="script.js"></script>
+</body>
+</html>
