@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let godziny = 0;
+        let minuty = 0;
+        let sekundy = 0;
+        let koniec = 0;
+		
+	function minutnik() {
+		if (godziny == 0 && minuty == 0 && sekundy == 0) {
+			clearInterval(koniec);
+			alert("Koniec czasu");
+			return;
+		}
+		
+		sekundy--;
+		if (sekundy < 0) {
+			sekundy = 59;
+			minuty--;
+		}
+		
+		if (minuty < 0) {
+			minuty = 59;
+			godziny--;
+		}
+		
+		document.getElementById("minutnik").innerHTML = dopiszZero(godziny) + ":" + dopiszZero(minuty) + ":" + dopiszZero(sekundy);		
+	}
+		
+        function startMinutnik() {
+        	godziny = parseInt(document.getElementById("godziny").value);
+        	minuty = parseInt(document.getElementById("minuty").value);
+        	sekundy = parseInt(document.getElementById("sekundy").value);			
+        	koniec = setInterval(minutnik, 1000);
+        }
+		
+	function dopiszZero(liczba) {
+        	if (liczba < 10) {
+                	liczba = "0" + liczba;
+                }
+                return liczba;
+        }
+    </script>
+</head>
+<body>
+    <h1>Minutnik</h1>
+    Godziny: <br/><input type="number" id="godziny" value="0"><br/>
+    Minuty: <br/><input type="number" id="minuty" value="0"><br/>
+    Sekundy: <br/><input type="number" id="sekundy" value="0"><br/>
+    <div id="minutnik"></div>
+    <input type="button" value="rozpocznij odliczanie" onclick="startMinutnik()" />
+</body>
+</html>
