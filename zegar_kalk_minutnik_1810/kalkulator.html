@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        let liczba=0;
+        let liczba2=0;
+        let dzialanie="";
+    function kalkulator()
+    {
+        let liczba1 = parseFloat(document.getElementById("liczba1").value);
+        let liczba2 =  parseFloat(document.getElementById("liczba2").value);
+        let dzialanie =  document.getElementById("dzialanie").value;
+        let wynik = 0;
+        console.log(liczba1,liczba2,dzialanie,wynik);
+
+        if(dzialanie == "+")
+            {
+                wynik = liczba1 + liczba2;
+                document.getElementById("wynik").innerHTML=liczba1+"+"+liczba2+"="+wynik;
+            }
+            else if (dzialanie == "-")
+            {
+                wynik = liczba1 - liczba2;
+                document.getElementById("wynik").innerHTML=liczba1+"-"+liczba2+"="+wynik;
+            }
+            else if (dzialanie == "*")
+            {
+                wynik = liczba1 * liczba2;
+                document.getElementById("wynik").innerHTML=liczba1+"*"+liczba2+"="+wynik;
+            }
+            else if (dzialanie == "/")
+            {
+                
+                wynik = liczba1 / liczba2;
+                document.getElementById("wynik").innerHTML=liczba1+"/"+liczba2+"="+wynik;
+            }
+        else
+        {
+            alert("BŁĘDNE DANE");
+        }
+       
+    }
+   
+    </script>
+</head>
+<body>
+    <h1>Prosty kalkulator w JS</h1>
+    <input type="number" id="liczba1">
+    <select id="dzialanie">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    <input type="number" id="liczba2">
+    </select>
+    <input type="button" value="Kliknij mnie" onclick="kalkulator()"/>
+    <div id="wynik">Tu będzie działanie</div>
+</body>
+</html>
