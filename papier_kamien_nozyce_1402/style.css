@@ -1,0 +1,29 @@
+.panel_lewy {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    padding: 10px;
+    border: 2px solid purple;
+    margin: 30px;
+    background-color: plum; 
+}
+
+.panel_prawy {
+    width: 800px;
+    height: 300px;
+    display: flex;
+    padding: 10px;
+    border: 2px solid purple;
+    margin: 30px;
+    align-items: right;
+    justify-content: space-between;
+}
+
+.panele {
+    display: flex;
+    flex-direction: row;
+}
+
+/* .przyciski {
+
+} */
