@@ -1,0 +1,25 @@
+body {
+    background-color: darkgrey;
+    margin: auto;
+    text-align: center;
+} 
+
+#R {
+    color: red
+}
+
+#G {
+    color: green
+}
+
+#B {
+    color: blue
+}
+
+#kolor {
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    margin: auto;
+    border-radius: 20%;
+}
