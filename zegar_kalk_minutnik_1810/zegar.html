@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zegarek</title>
+    <script>
+        function rolex(){
+            let czas = new Date();
+            let rok=dopiszZero(czas.getFullYear());
+            let miesiac=dopiszZero(czas.getMonth());
+            let dzien=dopiszZero(czas.getDay());
+            let godzina=dopiszZero(czas.getHours());
+            let minuta=dopiszZero(czas.getMinutes());
+            let sekunda=dopiszZero(czas.getSeconds());
+            document.getElementById("zegarek").innerHTML=rok+"-"+miesiac+"-"+dzien+"  "+godzina+":"+minuta+":"+sekunda;
+        }
+        function dopiszZero(liczba){
+                if (liczba<10){
+                    liczba = "0"+liczba;
+                }
+                return liczba;
+            }
+        function startRolex(){
+            setInterval(rolex, 1000);
+        }
+    </script>
+</head>
+<body>
+    <h1>Czas płynie...</h1>
+    <div id="zegarek">Tu będzie zegar</div>
+    <input type="button" value="pobierz czas" onclick="startRolex()" />
+</body>
+</html>
