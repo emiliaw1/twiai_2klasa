@@ -1,0 +1,42 @@
+body{
+    margin: auto;
+    text-align: center;
+    background-attachment: brown;
+}
+
+img{
+    width: 400px;
+    border: 50px solid black;
+    border-radius: 50xp;
+}
+
+@keyframes gej{
+    0% {border: 50px solid rgb(168, 0, 0);}
+    20% {border: 50px solid transparent}
+    40% {border: 50px solid rgb(168, 0, 0);}
+    60% {border: 50px solid transparent;}
+    80% {border: 50px solid rgb(168, 0, 0); transform: rotate3d(1, 1, 1, 360deg);}
+    100% {border: 50px solid transparent; transform: translateX(-1000px);}
+}
+
+
+img:hover{
+    animation: gej 1s linear;
+}
+/* 
+@keyframes po{
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+
+#tusk{
+    animation: po 5s infinite linear;
+}
+
+@keyframes pis{
+    0%{transform: rotate(360deg);}
+    100%{transform: rotate(0)}
+}
+
+#kaczynski{
+} */
